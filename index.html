@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rocket League Tracker</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="toast" id="toast"></div>
+    <div class="header">
+        <h1>RL Tracker</h1>
+    </div>
+    <div class="scoreboard">
+        <div class="scoreDiv">
+            <h1 class="score" id="homeScore">0</h1>
+        </div>
+        <div class="scoreDiv">
+            <h1 class="score" id="awayScore">0</h1>
+        </div>
+        <div class="gameStats">
+            <span>Lead</span>
+            <span class="square" id="leadIcon"></span>
+            <span title="Largest lead at any point">Max Lead</span>
+            <span class="square" id="maxLead">0</span>
+            <span title="Largest deficit at any point">Max Deficit</span>
+            <span class="square" id="maxTrail">0</span>
+            <span>Overtime</span>
+            <span class="square" id="overtimeIcon"></span>
+        </div>
+    </div>
+    <div class="controlsDiv" id="controlsDiv">
+        <button class="controlButton" id="gameStartButton" data-type="gameStart">
+            Game Start
+        </button>
+        <button class="controlButton" id="kevGoalButton" data-type="kevGoal">
+            Kev Goal
+        </button>
+        <button class="controlButton" id="overtimeStartButton" data-type="overtimeStart">
+            Overtime Start
+        </button>
+        <button class="controlButton" id="harGoalButton" data-type="harGoal">
+            Har Goal
+        </button>
+        <button class="controlButton" id="gameEndButton" data-type="gameEnd">
+            Game End
+        </button>
+        <button class="controlButton" id="oppGoalButton" data-type="oppGoal">
+            Opp Goal
+        </button>
+    </div>
+    <div class="eventsDiv">
+        <table id="eventsTable">
+            <thead>
+                <tr>
+                    <th>
+                        <button id="copyEventsButton">Copy</button>
+                    </th>
+                    <th>Type</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    <div class="summaryDiv">
+        <div class="recordContainer">
+            <div class="recordDiv">
+                <h1 class="score" id="sessionRecord">0-0</h1>
+            </div>
+        </div>
+        <div class="sessionStats">
+            <span>Win Rate</span>
+            <span id="winRate"></span>
+            <span>Overtime Win Rate</span>
+            <span id="overtimeRate"></span>
+            <span title="Leads converted divided by games led - excludes leadless wins">Lead Conversion</span>
+            <span id="leadConversion"></span>
+            <span title="Games lost where we led at any point">Blown Leads</span>
+            <span id="blownLeads">0</span>
+            <span title="Games won where we trailed at any point">Comeback Wins</span>
+            <span id="comebackWins">0</span>
+        </div>
+        <div class="sessionStats">
+            <span>Kev Goals</span>
+            <span id="kevGoals">0</span>
+            <span>Har Goals</span>
+            <span id="harGoals">0</span>
+            <span>Opp Goals</span>
+            <span id="oppGoals">0</span>
+        </div>
+        <div class="recentGames" id="recentGames">
+            <span class="squareLarge"></span>
+            <span class="squareLarge"></span>
+            <span class="squareLarge"></span>
+            <span class="squareLarge"></span>
+            <span class="squareLarge"></span>
+            <span class="squareLarge"></span>
+            <span class="squareLarge"></span>
+            <span class="squareLarge"></span>
+            <span class="squareLarge"></span>
+            <span class="squareLarge"></span>
+        </div>
+    </div>
+    <div class="gamesDiv">
+        <table id="gamesTable">
+            <thead>
+                <tr>
+                    <th>
+                        <button id="copyGamesButton">Copy</button>
+                    </th>
+                    <th>Date</th>
+                    <th>Lead</th>
+                    <th>Kev Goals</th>
+                    <th>Har Goals</th>
+                    <th>Opp Goals</th>
+                    <th>Overtime</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="javascript/index.js"></script>
+</body>
+</html>
