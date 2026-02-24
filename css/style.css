@@ -130,6 +130,11 @@ span.red {
     padding: 1rem 2rem;
 }
 
+button {
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+}
+
 button.controlButton {
     width: 100%;
     max-width: 14rem;
@@ -137,9 +142,6 @@ button.controlButton {
     border-radius: 0.5rem;
     padding: 0.5rem 0;
     background-color: #f5f5f5;
-
-    border: none;
-    border: solid var(--border-color);
 }
 
 button.controlButton:hover:not(:disabled) {
@@ -276,4 +278,14 @@ tbody tr:nth-child(odd) {
 
 tbody tr:nth-child(even) {
     background-color: hsl(0, 0%, 20%);
+}
+
+button.copyButton {
+    cursor: pointer;
+    background-color: var(--color-green);
+}
+
+button.deleteButton {
+    cursor: pointer;
+    background-color: var(--color-red);
 }

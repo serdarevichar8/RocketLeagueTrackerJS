@@ -406,7 +406,6 @@ function deleteEvent(id) {
 document.getElementById('controlsDiv').addEventListener('click', (e) => {
     if (e.target.matches('.controlButton')) {
         const type = e.target.dataset.type
-        console.log(type)
         addEvent(type)
     }
 })
@@ -414,6 +413,8 @@ document.getElementById('controlsDiv').addEventListener('click', (e) => {
 document.getElementById('eventsTable').querySelector('tbody').addEventListener('click', (e) => {
     if (e.target.matches('.deleteButton')) {
         const id = e.target.dataset.id
+
+        if (!confirm('Delete this event?')) return
         deleteEvent(id)
     }
 })
